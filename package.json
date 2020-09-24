@@ -1,0 +1,30 @@
+{
+  "name": "middleware-qren-invoice",
+  "version": "0.0.1",
+  "description": "Codebase Backend",
+  "private": true,
+  "scripts": {
+    "build": "pm2 start app.js",
+    "start": "node ./bin/server/www",
+    "dev": "nodemon ./bin/server/www"
+  },
+  "author": {
+    "name": "Risky Makira",
+    "email": "risky@makira.com",
+    "url": "https://makira.id"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "confidence": "^5.0.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.1",
+    "pg-promise": "^10.6.1"
+  }
+}
