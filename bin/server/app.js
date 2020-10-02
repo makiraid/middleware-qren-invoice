@@ -5,12 +5,16 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
+
 const app = express();
+app.use(cors())
 
 const indexRouter = require('../routes/index');
 const createInvoice = require('../routes/createInvoice');
 const pushNotif = require('../routes/pushNotif');
 const basicAuth = require('../utils/basicAuth');
+const validatePayment = require('../routes/validatePayment')
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -28,7 +32,7 @@ app.use('/api/v1', cors({
   preflightContinue: false,
   optionsSuccessStatus: 204,
   credentials: true
-}), basicAuth, createInvoice, pushNotif);
+}), basicAuth, createInvoice, pushNotif, validatePayment);
 
 app.use(function(req, res, next) {
   next(createError(404));

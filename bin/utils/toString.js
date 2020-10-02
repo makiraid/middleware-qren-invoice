@@ -1,9 +1,9 @@
-const toString = (nominal) => {
-  const num = nominal
-                .split(',')[0]
-                .replace(/\./g, '');
+// const toString = (nominal) => {
+//   const num = nominal
+//                 .split(',')[0]
+//                 .replace(/\./g, '');
 
-  return num;
-}
+//   return num;
+// }
 
-module.exports = toString;
+// module.exports = toString;
